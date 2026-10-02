@@ -1,0 +1,491 @@
+/* =========================================================
+   LifeLine - Blood Donation & Emergency Matching Platform
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+/* =========================================================
+   Main App
+   ========================================================= */
+
+.app {
+  min-height: 100vh;
+}
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.header {
+  background: linear-gradient(135deg, #b71c1c, #e53935);
+  color: white;
+  padding: 28px 40px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.header-content {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  opacity: 0.92;
+}
+
+/* =========================================================
+   Main Container
+   ========================================================= */
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 35px 25px 60px;
+}
+
+/* =========================================================
+   Dashboard Cards
+   ========================================================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.09);
+}
+
+.dashboard-card h3 {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dashboard-card .number {
+  margin-top: 8px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #b71c1c;
+}
+
+/* =========================================================
+   Section
+   ========================================================= */
+
+.section {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 28px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+.section h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  color: #111827;
+}
+
+.section-description {
+  margin: 0 0 22px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================================================
+   Forms
+   ========================================================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  background: #fff;
+  color: #1f2937;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #e53935;
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.12);
+}
+
+.form-button {
+  margin-top: 20px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 9px;
+  background: #d32f2f;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.form-button:hover {
+  background: #b71c1c;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   Tables
+   ========================================================= */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+thead {
+  background: #f9fafb;
+}
+
+th {
+  padding: 14px 15px;
+  text-align: left;
+  font-size: 13px;
+  color: #4b5563;
+  font-weight: 700;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+  padding: 14px 15px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+tbody tr:hover {
+  background: #fafafa;
+}
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.find-btn {
+  padding: 8px 14px;
+  border-radius: 7px;
+  background: #e53935;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.find-btn:hover {
+  background: #c62828;
+}
+
+/* =========================================================
+   Request Actions
+   ========================================================= */
+
+.request-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fulfill-btn {
+  padding: 8px 14px;
+  border-radius: 7px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.fulfill-btn:hover {
+  background: #c8e6c9;
+}
+
+/* =========================================================
+   Availability
+   ========================================================= */
+
+.available-status {
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.unavailable-status {
+  color: #c62828;
+  font-weight: 700;
+}
+
+.availability-btn {
+  padding: 8px 14px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.available-btn {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.available-btn:hover {
+  background: #c8e6c9;
+}
+
+.unavailable-btn {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.unavailable-btn:hover {
+  background: #ffcdd2;
+}
+
+/* =========================================================
+   Status Badges
+   ========================================================= */
+
+.open-status,
+.fulfilled-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.open-status {
+  color: #1565c0;
+  background: #e3f2fd;
+}
+
+.fulfilled-status {
+  color: #2e7d32;
+  background: #e8f5e9;
+}
+
+/* =========================================================
+   Urgency
+   ========================================================= */
+
+.high-urgency {
+  color: #c62828;
+  background: #ffebee;
+}
+
+.medium-urgency {
+  color: #ef6c00;
+  background: #fff3e0;
+}
+
+.low-urgency {
+  color: #2e7d32;
+  background: #e8f5e9;
+}
+
+.high-urgency,
+.medium-urgency,
+.low-urgency {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   Matching Section
+   ========================================================= */
+
+#matches {
+  scroll-margin-top: 20px;
+}
+
+.match-container {
+  margin-top: 20px;
+}
+
+.match-success {
+  background: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  color: #2e7d32;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.match-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 12px;
+  background: #fafafa;
+  transition: box-shadow 0.2s ease;
+}
+
+.match-card:hover {
+  box-shadow: 0 5px 16px rgba(15, 23, 42, 0.07);
+}
+
+.match-card h3 {
+  margin: 0 0 10px;
+  color: #111827;
+}
+
+.match-card p {
+  margin: 6px 0;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+/* =========================================================
+   Empty State
+   ========================================================= */
+
+.empty-state {
+  text-align: center;
+  padding: 35px 20px;
+  color: #6b7280;
+}
+
+.empty-state p {
+  margin: 0;
+}
+
+/* =========================================================
+   Donor Table
+   ========================================================= */
+
+.donor-table-wrapper {
+  overflow-x: auto;
+}
+
+/* =========================================================
+   Responsive Design
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 24px 25px;
+  }
+
+  .header h1 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 22px 14px 40px;
+  }
+
+  .header {
+    padding: 22px 18px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header p {
+    font-size: 13px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .section h2 {
+    font-size: 19px;
+  }
+
+  .form-button {
+    width: 100%;
+  }
+}
